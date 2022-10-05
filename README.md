@@ -25,11 +25,13 @@ List of class  :
                 Added all books details. title,publishedYear & price are the fields 
 /price-engine/src/main/resources/rule/rule.json
                 Following busniess logic added 
+		
                    I) All books published after 2000 have 10% discount.
                         -----------------------------------------
                         "name" : "Published after 2000 Year",
                         "discount" : 10,
                         "type" : "direct_discount_published_year"
+
 
                    II)Buy books worth more than £30 in total, get a 5% discount on the total.
                         -----------------------------------------
