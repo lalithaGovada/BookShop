@@ -3,27 +3,34 @@
                 Automated the purchas and checkout process of a bookshop
 List of class  :
 ~~~~~~~~~~~~~~~~
+
 /price-engine/src/main/java/com/ecom/bookShop/BookShopApplication.java :
+
                 Is the entry point of the application
 /price-engine/src/main/java/com/ecom/bookShop/controller/BookShopController.java:
+
                 Endpoint explore class.It convert the response to JSON. 
                 It ensure the data return by each method directly to JSON.
 		/getPrice = It get the proces based on book title
 		/checkout = Checkout the selected product added to cart and returns the bill amount
 /price-engine/src/main/java/com/ecom/bookShop/dto/BookInfo.java:
+
                 Is the Java Bean with below fields
 	                title as string   
                         price as decimal
                         publishedOn as a integer
 /price-engine/src/main/java/com/ecom/bookShop/dto/Checkout.java
+
                 Class that will produce the final amount to be paid when given a list of books.
                         BookInfo as a List
                         totalDiscount as double
                         totalPrice  as double
                         totalPriceAfterDisc  as double
 /price-engine/src/main/resources/rule/products.json 
+
                 Added all books details. title,publishedYear & price are the fields 
 /price-engine/src/main/resources/rule/rule.json
+
                 Following busniess logic added 
 		
                    I) All books published after 2000 have 10% discount.
@@ -40,9 +47,11 @@ List of class  :
                         "type" : "direct_discount_greater_30"
                 
 /price-engine/src/main/java/com/ecom/bookShop/service/BookShopService.java 
+
                 It has two methods
                 getPrice and checkOut
 /price-engine/src/main/java/com/ecom/bookShop/service/BookShopServiceImpl.java
+
                 getPrice method :-
                          a) Get the product details from products.json
                          b) Based on book Title get the price 
