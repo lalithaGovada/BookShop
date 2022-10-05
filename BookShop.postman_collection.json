@@ -1,0 +1,69 @@
+{
+	"info": {
+		"_postman_id": "0c11b0ff-c3b2-4ab2-84c3-2d940192bc9b",
+		"name": "BookShop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21497801"
+	},
+	"item": [
+		{
+			"name": "getPrice",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2022/getPrice?title=Moby Dick",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"getPrice"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Moby Dick"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "checkout",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"title\" : \"Moby Dick\",\r\n        \"price\" : 15.20,\r\n        \"publishedOn\" : 1851\r\n    },\r\n    {\r\n        \"title\" : \"The Terrible Privacy of Maxwell Sim\",\r\n        \"price\" : 13.14,\r\n        \"publishedOn\" : 2010\r\n    },\r\n    {\r\n        \"title\" : \"Still Life With Woodpecker\",\r\n        \"price\" : 11.05,\r\n        \"publishedOn\" : 1980\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2022/checkout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2022",
+					"path": [
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
